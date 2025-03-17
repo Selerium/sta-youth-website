@@ -6,6 +6,7 @@
   --color-primary: #0A0B13;
   --color-secondary: #989fffde;
   --color-white: white;
+  --default-transition-duration: 300ms;
 }
 
 :root {

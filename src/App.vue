@@ -4,8 +4,8 @@ import { RouterView } from "vue-router";
 </script>
 
 <template>
-  <div class="flex flex-col justify-center items-center w-11/12 mx-auto">
-    <Nav></Nav>
+  <div class="flex flex-col justify-start items-center w-11/12 mx-auto">
+    <Nav />
     <RouterView class="w-11/12" />
   </div>
 </template>
