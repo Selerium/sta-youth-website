@@ -1,3 +1,7 @@
+<!--
+component
+  - is a vertical marquee of the Nicene Creed running in backgroun
+-->
 <script setup lang="ts">
 import { ref } from "vue";
 
@@ -30,23 +34,23 @@ setInterval(async () => {
 
 <template>
   <div
-    class="overflow-hidden flex flex-wrap justify-center items-center w-full h-6/9 translate-y-4 relative"
+    class="overflow-hidden flex flex-wrap justify-center items-center w-full h-8/9 md:h-2/3 xl:h-7/9 relative"
   >
     <div class="absolute h-full w-full z-20 gradient"></div>
     <p
-      class="scroll-text inline lowercase text-justify text-2xl relative opacity-15"
+      class="scroll-text inline lowercase text-justify text-lg lg:text-2xl relative opacity-15"
     >
       {{ sampleText }}
     </p>
     <p
-      class="scroll-text inline lowercase text-justify text-2xl relative opacity-15"
+      class="scroll-text inline lowercase text-justify text-lg lg:text-2xl relative opacity-15"
     >
       {{ sampleText }}
     </p>
-    <p class="text-5xl absolute z-10 w-[500px] text-center -translate-y-6">
+    <p class="text-2xl lg:text-5xl absolute z-10 w-[500px] text-center -translate-y-3.5 lg:-translate-y-6">
       <span>{{ textChanger }}</span> for the
     </p>
-    <p class="text-5xl absolute z-10 w-[500px] text-center translate-y-6">
+    <p class="text-2xl lg:text-5xl absolute z-10 w-[500px] text-center translate-y-3.5 lg:translate-y-6">
       new generation
     </p>
   </div>
@@ -55,6 +59,10 @@ setInterval(async () => {
 <style scoped lang="scss">
 * {
   --duration: 20s;
+
+  @media screen and (max-width: 1024px) {
+    --duration: 45s;
+  }
 }
 
 @keyframes moveUp {

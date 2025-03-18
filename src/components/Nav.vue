@@ -1,15 +1,34 @@
+<!-- 
+component
+  - navbar that shows all brand logo, internal links, external link
+-->
 <script setup lang="ts">
+import Sidebar from "./Sidebar.vue";
+import { ref } from "vue";
 import { RouterLink } from "vue-router";
+
+const showSidebar = ref(false);
+
+function revealSidebar() {
+  showSidebar.value = !showSidebar.value;
+  console.log(showSidebar.value);
+}
 </script>
 
 <template>
-  <div class="w-11/12 fixed">
-    <div class="flex h-fit justify-center items-center pt-4 w-full">
-      <div class="flex w-1/2 justify-between items-center pr-18">
-        <img src="../assets/logo-transparent.png" v-on:click="" />
-        <div class="flex flex-col justify-center items-center">
-          <p>fridays @ 6pm | sundays @ 10am</p>
-          <a target="_blank" href="https://maps.app.goo.gl/TTrV3wFPgEdBcix99" class="link transition-all">
+  <Sidebar @close-sidebar="revealSidebar" :show-sidebar="showSidebar"/>
+  <div class="w-11/12 h-[10dvh] fixed z-50">
+    <div class="flex h-fit justify-between lg:justify-center items-center pt-4 w-full">
+      <div class="flex w-1/2 justify-between items-center lg:pr-18">
+        <img class="hidden lg:block w-auto h-20" src="../assets/logo-transparent.png" v-on:click="" />
+        <img class="lg:hidden block h-10" src="../assets/favicon-logo.svg" v-on:click="" />
+        <div class="lg:flex flex-col justify-center items-center hidden">
+          <p class="text-center">fridays @ 6pm | sundays @ 10am</p>
+          <a
+            target="_blank"
+            href="https://maps.app.goo.gl/TTrV3wFPgEdBcix99"
+            class="border-b-1 border-b-white link transition-all"
+          >
             location pin
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -30,15 +49,30 @@ import { RouterLink } from "vue-router";
           </a>
         </div>
       </div>
-      <div class="flex w-1/2 pl-16 justify-between items-center">
-        <RouterLink to="/" class="link transition-all">about</RouterLink>
-        <RouterLink to="/blog" class="link transition-all">blog</RouterLink>
-        <RouterLink to="/gallery" class="link transition-all">gallery</RouterLink>
-        <RouterLink to="/" class="link transition-all">contact</RouterLink>
+      <div class="lg:flex hidden w-1/2 lg:pl-16 justify-between items-center">
+        <RouterLink to="/" class="border-b-1 border-b-white link transition-all">about</RouterLink>
+        <RouterLink to="/blog" class="border-b-1 border-b-white link transition-all">blog</RouterLink>
+        <RouterLink to="/gallery" class="border-b-1 border-b-white link transition-all"
+          >gallery</RouterLink
+        >
+        <RouterLink to="/" class="border-b-1 border-b-white link transition-all">contact</RouterLink>
       </div>
+      <svg
+        width="34"
+        height="25"
+        viewBox="0 0 34 25"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        class="block lg:hidden h-4 cursor-pointer transition-all"
+        v-on:click="revealSidebar"
+      >
+        <line y1="0.5" x2="34" y2="0.5" stroke="white" />
+        <line y1="12.5" x2="34" y2="12.5" stroke="white" />
+        <line y1="24.5" x2="34" y2="24.5" stroke="white" />
+      </svg>
     </div>
-    <div class="w-full flex items-center gap-8">
-      <div class="w-1/2 bg-white h-1 rounded-sm"></div>
+    <div class="w-full lg:flex items-center gap-8 hidden">
+      <div class="w-1/2 bg-white h-[1px] rounded-sm"></div>
       <svg
         width="32"
         height="40"
@@ -53,26 +87,31 @@ import { RouterLink } from "vue-router";
         />
       </svg>
 
-      <div class="w-1/2 bg-white h-1 rounded-sm"></div>
+      <div class="w-1/2 bg-white h-[1px] rounded-sm"></div>
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
-img {
-  height: 75px;
-  width: auto;
-}
+// img {
+//   height: 75px;
+//   width: auto;
+// }
 
 .link:hover {
   font-weight: 800;
   cursor: pointer;
   color: var(--color-secondary);
+  border-bottom-color: var(--color-secondary);
 
   svg {
     path {
       stroke: var(--color-secondary);
     }
   }
+}
+
+svg:hover {
+  transform: scale(1.1);
 }
 </style>

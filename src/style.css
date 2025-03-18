@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 @import "tailwindcss";
 
+/* tailwind custom variables */
 @theme {
   --font-primary: "Major Mono Display", serif;
+  --font-secondary: "DM Sans", sans-serif;
   --color-primary: #0A0B13;
+  --color-primary-80: #0A0B13f4;
   --color-secondary: #989fffde;
   --color-white: white;
   --default-transition-duration: 300ms;
@@ -24,10 +28,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* force max width to be within the 1920 px range */
 #app {
   max-width: 1920px;
 }
 
+/* icon size recommendations */
 .icon {
   height: 12px;
   width: 12px;
