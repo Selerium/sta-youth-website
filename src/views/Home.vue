@@ -4,10 +4,21 @@ view
   - shows the textScroll hero, the about us, the youth room about, team about, and contact info
 -->
 <script setup lang="ts">
+import { ref } from "vue";
 import Polaroids from "../components/Polaroids.vue";
+import Slideshow from "../components/Slideshow.vue";
 import TextScroller from "../components/TextScroller.vue";
 import { RouterLink } from "vue-router";
 
+const imageText = [
+    'info about 1 image',
+    'info about 2 image',
+    'info about 3 image',
+]
+const activeImageText = ref(imageText[0]);
+function changeText(value: number) {
+  activeImageText.value = imageText[value];
+}
 </script>
 
 <template>
@@ -34,9 +45,15 @@ import { RouterLink } from "vue-router";
     </div>
     <div class="w-full lg:w-1/2 p-2 lg:h-full flex flex-col justify-center items-center gap-12">
       <h1 class="text-2xl lg:text-5xl text-center">a community of teens burning for <span class="text-red-900">jesus</span></h1>
-      <p class="font-secondary text-justify font-extralight">That’s the vision we have for young people at St. Andrew’s Church. Teenagers today have opportunities like no other - but also face challenges like none before. We provide a safe space for teens to not just be themselves, but to consistently be better everyday by realising for themselves what God’s designed them for.</p>
+      <p class="font-secondary text-sm lg:text-md text-justify font-extralight">That’s the vision we have for young people at St. Andrew’s Church. Teenagers today have opportunities like no other - but also face challenges like none before. We provide a safe space for teens to not just be themselves, but to consistently be better everyday by realising for themselves what God’s designed them for.</p>
       <RouterLink to="/gallery" class="w-fit h-fit p-2 lg:p-4 bg-white text-black rounded-sm ml-auto lg:text-xl">see more -></RouterLink>
     </div>
+  </div>
+  <div class="h-dvh w-full flex flex-col justify-center items-center gap-8">
+    <h1 class="text-2xl lg:text-5xl text-center">the youth room</h1>
+    <p class="w-10/12 font-secondary text-sm lg:text-md text-justify font-extralight">Every community requires a safe space to exist together in. Our dedicated Youth Room is our “upper room”, where we have our Sunday 10AM Bible Analysis & Study mornings and our Friday 6PM Refuge Youth nights. Other ministries borrow the room for different occasions, turning the room into a house that’s been saturated in prayers over the years. Worship is not limited to just a  room - but it’s nice to have a place we call our own.</p>
+    <Slideshow @changeText="changeText" />
+    <p class="font-secondary text-white">fig: {{ activeImageText }}</p>
   </div>
 </template>
 
@@ -47,6 +64,7 @@ import { RouterLink } from "vue-router";
 
   @media screen and (max-width: 1024px) {
     letter-spacing: normal;
+    line-height: 25px;
   }
 }
 
