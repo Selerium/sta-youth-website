@@ -21,7 +21,7 @@ function revealSidebar() {
     <div class="flex h-fit justify-between lg:justify-center items-center pt-4 w-full">
       <div class="flex w-1/2 justify-between items-center lg:pr-18">
         <img class="hidden lg:block w-auto h-20" src="../assets/logo-transparent.png" v-on:click="" />
-        <img class="lg:hidden block h-10" src="../assets/favicon-logo.svg" v-on:click="" />
+        <img class="lg:hidden block h-10 rounded-4xl" src="../assets/favicon-logo.svg" v-on:click="" />
         <div class="lg:flex flex-col justify-center items-center hidden">
           <p class="text-center">fridays @ 6pm | sundays @ 10am</p>
           <a

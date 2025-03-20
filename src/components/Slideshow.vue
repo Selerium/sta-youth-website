@@ -72,7 +72,7 @@ onMounted(() => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       @click="clickLeft"
-      class="lg:relative absolute left-1/12 px-1 z-30 cursor-pointer"
+      class="absolute md:relative left-1/12 md:left-0 px-4 z-30 cursor-pointer"
     >
       <path
         d="M38.2248 83L2.58463 41.6778C2.25181 41.292 2.26238 40.7175 2.60918 40.3441L38.2248 2"
@@ -91,7 +91,7 @@ onMounted(() => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       @click="clickRight"
-      class="lg:relative absolute right-1/12 px-1 z-30 cursor-pointer"
+      class="absolute md:relative right-1/12 md:right-0 px-4 z-30 cursor-pointer"
     >
       <path
         d="M2.22487 2L37.8651 43.3222C38.1979 43.708 38.1873 44.2825 37.8405 44.6559L2.22488 83"
