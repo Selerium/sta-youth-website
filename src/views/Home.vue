@@ -9,6 +9,7 @@ import Polaroids from "../components/Polaroids.vue";
 import Slideshow from "../components/Slideshow.vue";
 import TextScroller from "../components/TextScroller.vue";
 import { RouterLink } from "vue-router";
+import Team from "../components/Team.vue";
 
 const imageText = [
     'info about 1 image',
@@ -55,6 +56,7 @@ function changeText(value: number) {
     <Slideshow @changeText="changeText" />
     <p class="font-secondary text-white">fig: {{ activeImageText }}</p>
   </div>
+  <Team />
 </template>
 
 <style lang="scss" scoped>
