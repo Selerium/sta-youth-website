@@ -20,14 +20,14 @@ function revealSidebar() {
   <div class="w-11/12 h-[10dvh] fixed z-40">
     <div class="flex h-fit justify-between lg:justify-center items-center pt-4 w-full">
       <div class="flex w-1/2 justify-between items-center lg:pr-18">
-        <img class="hidden lg:block w-auto h-20" src="../assets/logo-transparent.png" v-on:click="" />
-        <img class="lg:hidden block h-10 rounded-4xl" src="../assets/favicon-logo.svg" v-on:click="" />
+        <img class="hidden xl:block w-auto h-20" src="../assets/logo-transparent.png" v-on:click="" />
+        <img class="xl:hidden mr-1 block h-10 rounded-4xl" src="../assets/favicon-logo.svg" v-on:click="" />
         <div class="lg:flex flex-col justify-center items-center hidden">
-          <p class="text-center">fridays @ 6pm | sundays @ 10am</p>
+          <p class="text-center not-lg:text-sm">fridays @ 6pm | sundays @ 10am</p>
           <a
             target="_blank"
             href="https://maps.app.goo.gl/TTrV3wFPgEdBcix99"
-            class="border-b-1 border-b-white link transition-all"
+            class="border-b-1 not-lg:text-sm border-b-white link transition-all"
           >
             location pin
             <svg
@@ -50,12 +50,12 @@ function revealSidebar() {
         </div>
       </div>
       <div class="lg:flex hidden w-1/2 lg:pl-16 justify-between items-center">
-        <RouterLink to="/" class="border-b-1 border-b-white link transition-all">about</RouterLink>
-        <RouterLink to="/blog" class="border-b-1 border-b-white link transition-all">blog</RouterLink>
-        <RouterLink to="/gallery" class="border-b-1 border-b-white link transition-all"
+        <RouterLink to="/" class="border-b-1 not-lg:text-sm border-b-white link transition-all">about</RouterLink>
+        <RouterLink to="/blog" class="border-b-1 not-lg:text-sm border-b-white link transition-all">blog</RouterLink>
+        <RouterLink to="/gallery" class="border-b-1 not-lg:text-sm border-b-white link transition-all"
           >gallery</RouterLink
         >
-        <RouterLink to="/" class="border-b-1 border-b-white link transition-all">contact</RouterLink>
+        <RouterLink to="/" class="border-b-1 not-lg:text-sm border-b-white link transition-all">contact</RouterLink>
       </div>
       <svg
         width="34"
@@ -93,11 +93,6 @@ function revealSidebar() {
 </template>
 
 <style lang="scss" scoped>
-// img {
-//   height: 75px;
-//   width: auto;
-// }
-
 .link:hover {
   font-weight: 800;
   cursor: pointer;
