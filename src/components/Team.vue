@@ -8,7 +8,7 @@ import { ref } from "vue";
 
 const team = [
   {
-    img: "src/assets/youth-photo-1.JPG",
+    img: "youth-photo-1.JPG",
     nickname: "adi",
     fullname: "john adithya",
     role: "youth director",
@@ -19,7 +19,7 @@ const team = [
     fullVerse: "Jesus Christ is the same yesterday and today and forever.",
   },
   {
-    img: "src/assets/youth-photo-1.JPG",
+    img: "youth-photo-1.JPG",
     nickname: "surya",
     fullname: "john surya",
     role: "youth director",
@@ -30,7 +30,7 @@ const team = [
     fullVerse: "Jesus Christ is the same yesterday and today and forever.",
   },
   {
-    img: "src/assets/youth-photo-1.JPG",
+    img: "youth-photo-1.JPG",
     nickname: "donna",
     fullname: "pravachana paul",
     role: "youth director",
@@ -41,7 +41,7 @@ const team = [
     fullVerse: "Jesus Christ is the same yesterday and today and forever.",
   },
   {
-    img: "src/assets/youth-photo-1.JPG",
+    img: "youth-photo-1.JPG",
     nickname: "rahel",
     fullname: "rahel thomas",
     role: "youth director",
