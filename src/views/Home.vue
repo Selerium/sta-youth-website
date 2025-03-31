@@ -11,7 +11,6 @@ import TextScroller from "../components/TextScroller.vue";
 import { RouterLink } from "vue-router";
 import Team from "../components/Team.vue";
 import ContactForm from "../components/ContactForm.vue";
-import Footer from "../components/Footer.vue";
 
 const imageText = [
     'info about 1 image',
@@ -60,7 +59,6 @@ function changeText(value: number) {
   </div>
   <Team />
   <ContactForm />
-  <Footer />
 </template>
 
 <style lang="scss" scoped>

@@ -5,9 +5,9 @@ component
 -->
 <script setup lang="ts">
 const photoList = [
+  "youth-photo-2.JPG",
   "youth-photo-1.JPG",
-  "youth-photo-1.JPG",
-  "youth-photo-1.JPG",
+  "youth-photo-3.JPG",
 ];
 </script>
 
