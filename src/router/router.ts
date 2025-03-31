@@ -1,8 +1,7 @@
 import { createWebHistory, createRouter } from 'vue-router'
 
-
 const routes = [
-  { path: '/',  component: () => import('../views/Home.vue')},
+  { path: `${import.meta.env.BASE_URL}/`,  component: () => import('../views/Home.vue')},
 ]
 
 const router = createRouter({
