@@ -4,12 +4,6 @@ component
   - displays brand logo, internal hyperlinks, and one external map pin link
 -->
 <script setup lang='ts'>
-import { ref } from 'vue';
-
-/*
-* variable handled by parent (nav) component that stores the 
-* state of whether the sidebar is currently in view or not
-*/
 const props = defineProps({
     showSidebar: Boolean
 })
