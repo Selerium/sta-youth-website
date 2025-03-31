@@ -7,9 +7,9 @@ component
 import { onMounted, ref, useTemplateRef } from 'vue';
 
 const images = [
-  "/src/assets/youth-photo-1.JPG",
-  "/src/assets/youth-photo-1.JPG",
-  "/src/assets/youth-photo-1.JPG",
+  "src/assets/youth-photo-1.JPG",
+  "src/assets/youth-photo-1.JPG",
+  "src/assets/youth-photo-1.JPG",
 ];
 
 const activeImage = ref(0);
