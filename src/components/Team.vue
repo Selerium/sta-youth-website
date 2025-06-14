@@ -8,15 +8,17 @@ import { ref } from "vue";
 
 const team = [
   {
-    img: "youth-photo-1.JPG",
+    img: "adi.jpeg",
     nickname: "adi",
     fullname: "john adithya",
     role: "youth director",
-    info: "This is some information about the person mentioned here. It’s a good place to give a short bio about who the leader/volunteer is and how they would introduce themselves. Something that gives people a quick brief look into the life and character of this person.",
+    info: "A passionate creative that strives to use his skills and talents to glorify Him. For the past 3 years, Adi has been managing and leading the youth group at St. Andy's (as he calls it). Does music, reading, badminton, and web dev (built this site!).",
     food: "shawarmas",
     superpower: "extreme empathy",
     verse: "hebrews 13:8",
     fullVerse: "Jesus Christ is the same yesterday and today and forever.",
+    thumbnailPosition: "object-top",
+    thumbnailTextColor: "text-white",
   },
   {
     img: "youth-photo-1.JPG",
@@ -28,6 +30,8 @@ const team = [
     superpower: "extreme empathy",
     verse: "hebrews 13:8",
     fullVerse: "Jesus Christ is the same yesterday and today and forever.",
+    thumbnailPosition: "object-center",
+    thumbnailTextColor: "text-white",
   },
   {
     img: "youth-photo-1.JPG",
@@ -39,6 +43,8 @@ const team = [
     superpower: "extreme empathy",
     verse: "hebrews 13:8",
     fullVerse: "Jesus Christ is the same yesterday and today and forever.",
+    thumbnailPosition: "object-center",
+    thumbnailTextColor: "text-white",
   },
   {
     img: "youth-photo-1.JPG",
@@ -50,6 +56,8 @@ const team = [
     superpower: "extreme empathy",
     verse: "hebrews 13:8",
     fullVerse: "Jesus Christ is the same yesterday and today and forever.",
+    thumbnailPosition: "object-center",
+    thumbnailTextColor: "text-white",
   },
 ];
 
@@ -97,11 +105,12 @@ function moveActiveMember(value: Boolean) {
           @click="activeMember = index"
         >
           <img
-            class="w-full h-full object-center object-cover"
+            class="w-full h-full object-cover"
+            :class="member.thumbnailPosition"
             :src="member.img"
           />
           <p
-            class="font-secondary text-3xl absolute -bottom-0.5 right-2 text-right short-width font-bold"
+            class="font-secondary w-full thumbnail-text text-3xl absolute -bottom-0.5 right px-2 text-right short-width font-bold"
           >
             {{ member.nickname }}
           </p>
@@ -208,5 +217,9 @@ h2 {
 
 .short-width {
   letter-spacing: -2px;
+}
+
+.thumbnail-text {
+  background-image: linear-gradient(0 #00000000, right #000000ff);
 }
 </style>
